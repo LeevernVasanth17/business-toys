@@ -8,6 +8,6 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-app.listen(5000, function(req, res) {
+app.listen(process.env.PORT || 5000, function(req, res) {
   console.log("server started at port 5000");
 });
