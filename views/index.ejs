@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./css/toys.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./img/1.jpg">
+  </head>
+  <body>
+
+<div class="container top-padd">
+
+<div class="col-xs-5 container">
+    <div id="slidecontainer">
+      <h4>inflation</h4>
+    <input onchange="emoji()" type="range" min="0" max="72" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+    </div>
+
+    <div id="slidecontainer">
+      <h4>crude($/barrel)</h4>
+    <input onchange="emoji()" type="range" min="0" max="3000" value="50" class="slider" id="myRange2">
+    <p>Value: <span id="demo2"></span></p>
+    </div>
+
+    <div id="slidecontainer">
+      <h4>interest rate %</h4>
+    <input onchange="emoji()" type="range" min="0" max="100" value="50" class="slider" id="myRange3">
+    <p>Value: <span id="demo3"></span></p>
+    </div>
+
+    <div id="slidecontainer">
+      <h4>Gold price(Rs/10gm)</h4>
+    <input onchange="emoji()" type="range" min="0" max="30000" value="50" class="slider" id="myRange4">
+    <p>Value: <span id="demo4"></span></p>
+    </div>
+
+    <div id="slidecontainer">
+      <h4>GDP %</h4>
+    <input onchange="emoji()" type="range" min="0" max="100000" value="50" class="slider" id="myRange5">
+    <p>Value: <span id="demo5"></span></p>
+    </div>
+</div>
+
+<div class="vl"></div>
+
+<div class="col-xs-5 container">
+  <div class="container" id="img1" style="display:block;">
+  <center>
+    <img src="./img/awesome.png" class="image" alt="">
+    <h1>Awesome!</h1>
+  </center>
+</div>
+
+<div class="container" id="img2" style="display:none;">
+  <center>
+    <img src="./img/gotohell.jpg" class="image" alt="">
+    <h1>Go to HELL</h1>
+  </center>
+</div>
+
+<div class="container" id="img3" style="display:none;">
+  <center>
+    <img src="./img/sosweet.png" class="image" alt="">
+    <h1>So Sweet!!</h1>
+  </center>
+</div>
+
+<div class="container" id="img4" style="display:none;">
+  <center>
+    <img src="./img/yuk.jpg" class="image" alt="">
+    <h1>Yuk</h1>
+  </center>
+</div>
+
+<div class="container" id="img5" style="display:none;">
+  <center>
+    <img src="./img/iwillkilu.jpg" class="image" alt="">
+    <h1>I Will Kill You</h1>
+  </center>
+</div>
+
+
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+     output.innerHTML = this.value;
+    }
+
+    var slider2 = document.getElementById("myRange2");
+    var output2 = document.getElementById("demo2");
+    output2.innerHTML = slider2.value;
+
+    slider2.oninput = function() {
+     output2.innerHTML = this.value;
+    }
+
+    var slider3 = document.getElementById("myRange3");
+    var output3 = document.getElementById("demo3");
+    output3.innerHTML = slider3.value;
+
+    slider3.oninput = function() {
+     output3.innerHTML = this.value;
+    }
+
+    var slider4 = document.getElementById("myRange4");
+    var output4 = document.getElementById("demo4");
+    output4.innerHTML = slider4.value;
+
+    slider4.oninput = function() {
+     output4.innerHTML = this.value;
+    }
+
+    var slider5 = document.getElementById("myRange5");
+    var output5 = document.getElementById("demo5");
+    output5.innerHTML = slider5.value;
+
+    slider5.oninput = function() {
+     output5.innerHTML = this.value;
+    }
+
+
+function emoji(){
+  let p = Math.floor(Math.random() * 5);
+  const m = p.toString()
+  console.log(m);
+
+  var img1 = document.querySelector("#img1");
+  var img2 = document.querySelector("#img2");
+  var img3 = document.querySelector("#img3");
+  var img4 = document.querySelector("#img4");
+  var img5 = document.querySelector("#img5");
+
+  switch(p){
+    case 1:
+    img1.style.display = "block";
+    img2.style.display = "none";
+    img3.style.display = "none";
+    img4.style.display = "none";
+    img5.style.display = "none";
+    break;
+
+    case 2:
+    img1.style.display = "none";
+    img2.style.display = "block";
+    img3.style.display = "none";
+    img4.style.display = "none";
+    img5.style.display = "none";
+    break;
+
+    case 3:
+    img1.style.display = "none";
+    img2.style.display = "none";
+    img3.style.display = "block";
+    img4.style.display = "none";
+    img5.style.display = "none";
+    break;
+
+    case 4:
+    img1.style.display = "none";
+    img2.style.display = "none";
+    img3.style.display = "none";
+    img4.style.display = "block";
+    img5.style.display = "none";
+    break;
+
+    case 5:
+    img1.style.display = "none";
+    img2.style.display = "none";
+    img3.style.display = "none";
+    img4.style.display = "none";
+    img5.style.display = "block";
+    break;
+  }
+}
+
+
+
+</script>
+  </body>
+</html>
